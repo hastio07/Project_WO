@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Symfony\Component\Routing\Route as RoutingRoute;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +15,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('Register');
+});
+
+Route::get('/navbar', function () {
+    return view('navbar');
+});
+
+Route::get('/LoginAdmin', function () {
+    return view('LoginAdmin');
+});
+Route::get('/Register', function () {
+    return view('Register');
+});
+Route::get('/Dashboard', function () {
+    return view('Dashboard');
 });
