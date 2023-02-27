@@ -1,0 +1,24 @@
+.card .rounded-circle {
+    width: 100px;
+    margin-bottom: 50px;
+}
+
+.card .card-body p {
+    margin-top: 20px
+}
+
+.card .card-body h4 {
+    margin-top: 20px
+}
+
+.card .card-body i {
+    margin-top: 20px
+}
+
+.img-owner {
+    width: 80%;
+    margin-bottom: 50px;
+}
+
+/* .card .card-body .text-center {
+    max-width: 10px; */

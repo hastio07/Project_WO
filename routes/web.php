@@ -1,33 +1,45 @@
 <?php
 
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
-use Symfony\Component\Routing\Route as RoutingRoute;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 Route::get('/', function () {
-    return view('Register');
-});
+    return view('TampilanUser/home');
+})->name('home')->middleware('prevent-back-history');
 
-Route::get('/navbar', function () {
-    return view('navbar');
-});
+Route::get('/dashboard', function () {
+    return view('TampilanAdmin/Dashboard');
+})->middleware(['auth:admins', 'prevent-back-history']);
 
-Route::get('/LoginAdmin', function () {
-    return view('LoginAdmin');
-});
-Route::get('/Register', function () {
-    return view('Register');
-});
-Route::get('/Dashboard', function () {
-    return view('Dashboard');
-});
+Route::get('/manageakun', function () {
+    return view('TampilanAdmin/ManageAkun');
+})->middleware(['auth:admins', 'prevent-back-history']);
+
+Route::get('/managejadwal', function () {
+    return view('TampilanAdmin/ManageJadwal');
+})->middleware(['auth:admins', 'prevent-back-history']);
+
+Route::get('/manage-produk', function () {
+    return view('TampilanAdmin/ManageProduk');
+})->middleware(['auth:admins', 'prevent-back-history']);
+
+Route::get('/manage-artikel', function () {
+    return view('TampilanAdmin/ManageArtikel');
+})->middleware(['auth:admins', 'prevent-back-history']);
+
+Route::get('/manageperusahaan', function () {
+    return view('TampilanAdmin/ManagePerusahaan');
+})->middleware(['auth:admins', 'prevent-back-history']);
+
+Route::get('/manage-gallery', function () {
+    return view('TampilanAdmin/ManageGallery');
+})->middleware(['auth:admins', 'prevent-back-history']);
+
+Route::get('/manage-pesanan', function () {
+    return view('TampilanAdmin/ManagePesanan');
+})->middleware(['auth:admins', 'prevent-back-history']);
+
+Route::get('/login', [LoginController::class, 'index'])->middleware('guest:admins');
+Route::post('/login',  [LoginController::class, 'login_aja']);
+Route::post('/logout', [LoginController::class, 'logout_aja']);

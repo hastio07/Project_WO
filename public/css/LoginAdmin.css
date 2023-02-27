@@ -68,6 +68,7 @@
 
 .carousel-inner img {
     height: 80vh;
+    object-fit: cover;
 }
 
 .input-group .input-group-text .form-control {
