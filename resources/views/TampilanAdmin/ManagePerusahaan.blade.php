@@ -4,7 +4,7 @@
 @section('content')
 <section>
     <div class="content-wrapper">
-        <div class="card text-center">
+        <div class="card">
             <div class="card-header">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item" role="presentation">
@@ -22,9 +22,13 @@
                             <div class="row same-height">
                                 <div class="col-md-8">
                                     <div class="card">
-                                        <h4 class="card-title">Manage Profil Perusahaan</h4>
+                                        <h4 class="card-title text-center">Manage Profil Perusahaan</h4>
                                         <div class="card-body">
-
+                                            <label for="withHelperTextBottom" class="form-label">Uplaod Foto Owner</label>
+                                            <div class="d-flex">
+                                                <input class="form-control w-50" type="file" id="formFile">
+                                                <button class="btn btn-primary">Upload</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -77,10 +81,10 @@
                         </div>
                     </div>
                     <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 </section>
 @endsection

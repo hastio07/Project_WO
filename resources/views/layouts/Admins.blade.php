@@ -40,27 +40,6 @@
 </head>
 
 <body>
-    <!-- modal untuk hapus -->
-    <div class="Modal">
-        <div class="modal fade" id="smallModal" tabindex="-1" aria-labelledby="smallModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-sm">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title text-danger" id="smallModalLabel">Peringatan!</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <h6>Yakin Ingin Menghapusnya?</h6>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                        <button type="button" class="btn btn-danger">YA</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end modal -->
     <div id="app">
         <div class="shadow-header"></div>
         <header class="header-navbar fixed">
@@ -307,6 +286,12 @@
                         <a href="/manageperusahaan" class="link">
                             <i class="ti-home"></i>
                             <span>Manage Perusahaan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/managepegawai" class="link">
+                            <i class="ti-user"></i>
+                            <span>Manage Pegawai</span>
                         </a>
                     </li>
                 </ul>

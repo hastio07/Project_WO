@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PegawaiController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -43,3 +44,4 @@ Route::get('/manage-pesanan', function () {
 Route::get('/login', [LoginController::class, 'index'])->middleware('guest:admins');
 Route::post('/login',  [LoginController::class, 'login_aja']);
 Route::post('/logout', [LoginController::class, 'logout_aja']);
+Route::resource('/managepegawai', PegawaiController::class);
